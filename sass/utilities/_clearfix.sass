@@ -1,0 +1,18 @@
+.clearfix:after
+  :content "."
+  :display block
+  :height 0
+  :clear both
+  :visibility hidden
+
+
+*
+  html>body .clearfix
+    :display inline-block
+    :width 100%
+
+*
+  html .clearfix
+    /* Hide from IE/mac \*/
+    :height 1%
+    /* End hide from IE/mac
