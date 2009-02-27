@@ -6,4 +6,4 @@ More to come.
 
 ## More information:
 
-Haml & Sass - http://github.com/nex3/haml/tree/master
+- Get Haml&Sass from [http://github.com/nex3/haml/tree/master] (http://github.com/nex3/haml/tree/master)
