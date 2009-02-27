@@ -1,7 +1,0 @@
-A collection of CSS files providing a basic framework 
-for building complex and modern layouts. 
-
-tools.css - Provides the (in)famous clearfix hack
-undo.css  - Resets default browser styles (inspired by Eric Meyer)
-
-More to come.
