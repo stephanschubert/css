@@ -13,8 +13,14 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 - forms/_on_same_line.sass 	  -- Display form items on the same row
 - forms/_label_after_inpput.sass  -- Display the input in front of the label
 
+- links/_link_color.sass          -- Set all colors for a link's states
+
 More to come.
 
 ## More information:
 
 - Get Haml&Sass from [http://github.com/nex3/haml/tree/master] (http://github.com/nex3/haml/tree/master)
+
+## Credits
+
+- I shamelessly stole some mixins from Chris Eppstein's compass :)
