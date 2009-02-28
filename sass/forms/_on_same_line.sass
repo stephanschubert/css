@@ -1,0 +1,38 @@
+// Expects that your form is marked up as list and
+// every list item can be identified by a class.
+//
+// A maximum of four was enough for me so far.
+// 
+// Example:
+//
+// HTML:
+//
+// <form>
+//   <ul>
+//     <li class="salutation">..</li>
+//     <li class="first_name">..</li>
+//     <li class="last_name">..</li>
+//     ...
+//
+// CSS/Sass:
+//
+// form
+//   +on_same_line(".salutation", ".first_name", ".last_name")
+//
+
+=on_same_line(!first, !second = nil, !third = nil, !fourth = nil)
+  li#{!first}
+    :clear left
+    :float left
+
+  @if !second
+    li#{!second}
+      :float left
+
+  @if !third
+    li#{!third}
+      :float left
+
+  @if !fourth
+    li#{!fourth}
+      :float left

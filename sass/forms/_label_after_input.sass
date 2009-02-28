@@ -1,0 +1,37 @@
+// Display the checkbox or radiobutton in front
+// of it's describing label.
+//
+// Expects that your form is marked up as list
+// and uses a label tag for each input.
+//
+// Example:
+//
+// HTML:
+//
+// <form>
+//   <ul>
+//     <li class="check_me">
+//       <label>Check this!</label>
+//       <input type="checkbox"></input>
+//     </li>
+//     ...
+//
+// CSS/Sass:
+//
+// form
+//   +label_after_input(".check_me")
+//
+
+=label_after_input(!which, !input_width = 24px, !adjust_top = 0.25em)
+  li#{!which}
+    :position relative
+
+    label
+      :position relative
+      :left= !input_width
+      :top= !adjust_top
+
+    input
+      :position absolute
+      :left 0
+      :top 0
