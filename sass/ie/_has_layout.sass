@@ -1,0 +1,20 @@
+// IE's render-engine has an internal flag
+// named "hasLayout" for each element. 
+//
+// Several bugs can be resolved by triggering it.
+//
+// More information: 
+// http://www.satzansatz.de/cssd/onhavinglayout.html
+
+
+// This seems to be the best option nowadays -
+// just ignore IE5.0..
+
+=ie_gain_layout
+  :zoom 1
+
+// Resetting hasLayout is possible unless it has
+// been triggered by another rule too.
+
+=ie_reset_layout
+  :zoom normal
