@@ -2,32 +2,40 @@
 
 A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS framework with tools and fixes. 
 
-## Features
+# Features
 
-- utilities/_reset.sass		  -- Several reset mixins inspired by Eric Meyer's work
-- utilities/_clearfix.sass        -- The (in)famous clearfix hack as mixin
-- utilities/_even_and_odd.sass    -- Zebra-striping mixin
-- utilities/_inline_block.sass    -- Cross-browser inline-block support
-- forms/_on_same_line.sass 	  -- Display form items on the same row
-- forms/_label_after_inpput.sass  -- Display the input in front of the label
-- links/_link_colors.sass         -- Set all colors for a link's states
+## Utilities
 
-## Fixes
+- Several reset mixins inspired by Eric Meyer's work (_reset.sass)
+- The (in)famous clearfix hack as mixin (_clearfix.sass)
+- Zebra-striping mixin (_even_and_odd.sass)
+- Cross-browser inline-block support (_inline_block.sass)
 
-### Internet Explorer
+### Fixes
 
-- utilities/ie/_has_layout.sass   -- Mixins for gaining and resetting the hasLayout flag
+#### Internet Explorer
 
-### Safari
+- Mixins for gaining and resetting IE's internal hasLayout flag (_has_layout.sass)
 
-- utilities/safari/_fix_anti_aliasing -- Mixin for fixing Safari's anti-aliasing of type on dark backgrounds
+#### Safari
+
+- Mixin for fixing Safari's anti-aliasing of type on dark backgrounds (_fix_anti_aliasing.ass)
+
+## Forms
+
+- Display form items on the same row (_on_same_line.sass)
+- Display the input in front of the label (_label_after_input.sass)
+
+## Links
+
+- Set all colors for a link's states (_link_colors.sass)
 
 More to come.
 
-## More information:
+# More information:
 
 - Get Haml&Sass from [http://github.com/nex3/haml/tree/master] (http://github.com/nex3/haml/tree/master)
 
-## Credits
+# Credits
 
 I shamelessly stole some mixins from Chris Eppstein's compass :)
