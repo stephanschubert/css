@@ -12,7 +12,7 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 - Mixins for gaining and resetting IE's internal hasLayout flag (_has_layout.sass)
 
 ## Safari
-- Mixin for fixing Safari's anti-aliasing of type on dark backgrounds (_fix_anti_aliasing.ass)
+- Mixin for fixing Safari's anti-aliasing of type on dark backgrounds (_fix_anti_aliasing.sass)
 
 # Forms
 - Display form items on the same row (_on_same_line.sass)
