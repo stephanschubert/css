@@ -4,8 +4,11 @@
 // targeting browsers which do not support 
 // the pseudo-class :nth-child.
 
-=even_and_odd(!even, !odd = "transparent")
+=zebra-striping(!even, !odd = "transparent")
   &:nth-child(even), &.even
     :background-color= !even
   &:nth-child(odd), &.odd
     :background-color= !odd
+
+.test
+  +zebra-striping(#fff)
