@@ -6,6 +6,7 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 
 - utilities/_reset.sass    - Several reset mixins inspired by Eric Meyer's work
 - utilities/_clearfix.sass - The (in)famous clearfix hack as mixin
+- utilities/_even_and_odd.sass - Zebra-striping mixin
 
 - forms/_on_same_line.sass - Display form items on the same row
 - forms/_label_after_inpput.sass - Display the input in front of the label
