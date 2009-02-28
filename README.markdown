@@ -8,11 +8,9 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 - utilities/_clearfix.sass        -- The (in)famous clearfix hack as mixin
 - utilities/_even_and_odd.sass    -- Zebra-striping mixin
 - utilities/_inline_block.sass    -- Cross-browser inline-block support
-
 - forms/_on_same_line.sass 	  -- Display form items on the same row
 - forms/_label_after_inpput.sass  -- Display the input in front of the label
-
-- links/_link_color.sass          -- Set all colors for a link's states
+- links/_link_colors.sass         -- Set all colors for a link's states
 
 ## Fixes
 
@@ -32,4 +30,4 @@ More to come.
 
 ## Credits
 
-- I shamelessly stole some mixins from Chris Eppstein's compass :)
+I shamelessly stole some mixins from Chris Eppstein's compass :)
