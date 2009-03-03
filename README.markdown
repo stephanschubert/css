@@ -6,6 +6,7 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 - The (in)famous clearfix hack as mixin (utilities/clearfix.sass)
 - Zebra-striping mixin (utilities/zebra-striping.sass)
 - Cross-browser inline-block support (utilities/inline-block.sass)
+- Round corners mixin (utilities/round-corners.sass) (No IE-support for now)
 
 # Fixes
 ## Internet Explorer
