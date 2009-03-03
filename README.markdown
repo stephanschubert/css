@@ -22,6 +22,9 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 # Links
 - Set all colors for a link's states (links/link-colors.sass)
 
+# Typography
+- Caps-ify some text (typography/caps.sass)
+
 More to come.
 
 # More information:
