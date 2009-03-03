@@ -1,0 +1,16 @@
+// IE doesn't support this!
+
+=shadow(!offset_x = 1px, !offset_y = 1px, !blur_radius = 1px, !color = #000)
+  :text-shadow= !offset_x !offset_y !blur_radius !color
+
+// Shortcut for faking engraved text
+=engrave(!color = #fff)
+  +shadow(0, 1px, 1px, !color)
+
+// Shortcut for faking embossed text - just an alias for convenience
+=emboss(!color = #000)
+  +shadow(0, 1px, 1px, !color)
+
+// Another shortcurt/alias for convenience
+=glow(!blur_radius = 5px, !color = #fff)
+  +shadow(1px, 1px, !blur_radius, !color)

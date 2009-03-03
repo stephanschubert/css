@@ -24,6 +24,7 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 
 # Typography
 - Caps-ify some text (typography/caps.sass)
+- Add shadows or glow to your text or engrave/emboss it (typography/shadow.sass)
 
 More to come.
 
