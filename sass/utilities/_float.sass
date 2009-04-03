@@ -1,0 +1,12 @@
+// Implementation of float:left/right with fix
+// for IE's double margin bug.
+
+=float(!side = "left")
+  :display inline
+  :float= !side
+
+=float-left
+  +float("left")
+
+=float-right
+  +float("right")

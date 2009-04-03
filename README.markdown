@@ -4,6 +4,7 @@ A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS f
 # Utilities
 - Several reset mixins inspired by Eric Meyer's work (utilities/reset.sass)
 - The (in)famous clearfix hack as mixin (utilities/clearfix.sass)
+- Float-mixins with fix for IE's double-margin bug (utilities/float.sass)
 - Zebra-striping mixin (utilities/zebra-striping.sass)
 - Cross-browser inline-block support (utilities/inline-block.sass)
 - Round corners mixin (utilities/round-corners.sass) (No IE-support for now)
