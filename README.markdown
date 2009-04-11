@@ -1,6 +1,10 @@
 # jazen/css
 A [Sass] (http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html)-based CSS framework with tools and fixes. 
 
+# ATTENTION
+
+You need the *bleeding edge* version of Sass due to some new features i'm already using.
+
 # Utilities
 - Several reset mixins inspired by Eric Meyer's work (utilities/reset.sass)
 - The (in)famous clearfix hack as mixin (utilities/clearfix.sass)
