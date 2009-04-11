@@ -11,6 +11,7 @@ You need the *bleeding edge* version of Sass due to some new features i'm alread
 - Float-mixins with fix for IE's double-margin bug (utilities/float.sass)
 - Zebra-striping mixin (utilities/zebra-striping.sass)
 - Cross-browser inline-block support (utilities/inline-block.sass)
+- Image-replacement (utilities/replace-text.sass)
 - Round corners mixin (utilities/round-corners.sass) (No IE-support for now)
 
 # Fixes

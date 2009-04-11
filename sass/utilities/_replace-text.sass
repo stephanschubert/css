@@ -1,0 +1,15 @@
+// Replaces text with an image -
+//
+// Text will be hidden by moving it
+// out of the window, so it stays
+// indexable for Google and Co.
+//
+
+=replace-text(!img, !x = 50%, !y = 50%)
+  :background
+    :image= url(!img)
+    :position= !x !y
+    :repeat no-repeat
+
+  :overflow hidden
+  :text-indent -9999em
