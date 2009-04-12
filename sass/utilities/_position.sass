@@ -17,14 +17,26 @@
   @if !left
     :left= !left
 
-=position-top-left(!top = false, !left = false)
+=position-top-left(!top = 0, !left = 0)
   +position("absolute", !top, false, false, !left)
 
-=position-top-right(!top = false, !right = false)
+=position-top(!top = 0)
+  +position("absolute", !top, false, false, false)
+
+=position-top-right(!top = 0, !right = 0)
   +position("absolute", !top, !right, false, false)
 
-=position-bottom-right(!bottom = false, !right = false)
+=position-right(!right = 0)
+  +position("absolute", false, !right, false, false)
+
+=position-bottom-right(!bottom = 0, !right = 0)
   +position("absolute", false, !right, !bottom, false)
 
-=position-bottom-left(!bottom = false, !left = false)
+=position-bottom(!bottom = 0)
+  +position("absolute", false, false, !bottom, false)
+
+=position-bottom-left(!bottom = 0, !left = 0)
   +position("absolute", false, false, !bottom, !left)
+
+=position-left(!left = 0)
+  +position("absolute", false, false, false, !left)
