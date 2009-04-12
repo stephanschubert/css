@@ -19,51 +19,53 @@
 
 // Mixins for convenience
 
-=position-top-left(!top = 0, !left = 0)
-  +position("absolute", !top, false, false, !left)
+=absolute(!top = false, !right = false, !bottom = false, !left = false)
+  +position("absolute", !top, !right, !bottom, !left)
 
-=position-top(!top = 0)
-  +position("absolute", !top, false, false, false)
+=relative(!top = false, !right = false, !bottom = false, !left = false)
+  +position("relative", !top, !right, !bottom, !left)
 
-=position-top-right(!top = 0, !right = 0)
-  +position("absolute", !top, !right, false, false)
+// Even more convenience
 
-=position-right(!right = 0)
-  +position("absolute", false, !right, false, false)
+=absolute-top-left(!top = 0, !left = 0)
+  +absolute(!top, false, false, !left)
 
-=position-bottom-right(!bottom = 0, !right = 0)
-  +position("absolute", false, !right, !bottom, false)
+=absolute-top(!top = 0)
+  +absolute(!top, false, false, false)
 
-=position-bottom(!bottom = 0)
-  +position("absolute", false, false, !bottom, false)
+=absolute-top-right(!top = 0, !right = 0)
+  +absolute(!top, !right, false, false)
 
-=position-bottom-left(!bottom = 0, !left = 0)
-  +position("absolute", false, false, !bottom, !left)
+=absolute-right(!right = 0)
+  +absolute(false, !right, false, false)
 
-=position-left(!left = 0)
-  +position("absolute", false, false, false, !left)
+=absolute-bottom-right(!bottom = 0, !right = 0)
+  +absolute(false, !right, !bottom, false)
+
+=absolute-bottom(!bottom = 0)
+  +absolute(false, false, !bottom, false)
+
+=absolute-bottom-left(!bottom = 0, !left = 0)
+  +absolute(false, false, !bottom, !left)
+
+=absolute-left(!left = 0)
+  +absolute(false, false, false, !left)
 
 
 // Mixins for convenient relative positioning
-// Note the minus signs..
+// *Note* the minus signs..
 
 =move(!top = false, !right = false, !bottom = false, !left = false)
-  +position("relative", !top, !right, !bottom, !left)
-
-=move-top(!top = 0)
-  +move(!top, false, false, false)
-
-=move-bottom(!bottom = 0)
-  +move(false, false, !bottom, false)
+  +relative(!top, !right, !bottom, !left)
 
 =move-up(!up = 0)
-  +move-top(-!up)
+  +move(-!up)
 
 =move-right(!right = 0)
   +move(false, -!right)
 
 =move-down(!down = 0)
-  +move-bottom(-!down)
+  +move(false, false, -!down)
 
 =move-left(!left = 0)
   +move(false, false, false, -!left)
