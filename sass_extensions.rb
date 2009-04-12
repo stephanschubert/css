@@ -14,7 +14,6 @@ module Sass::Script::Functions
 
   def identify(path, what)
     path = path.to_s
-    path = File.expand_path(path)
     `identify -format %#{what} #{path}`    
   end
 
