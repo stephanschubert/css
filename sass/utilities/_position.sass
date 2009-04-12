@@ -1,0 +1,19 @@
+// Positions the element relative to its
+// surrounding context (Set a new one using
+// new-context mixin)
+
+=position(!mode = "absolute", !top = false, !right = false, !bottom = false, !left = false)
+  :position= !mode
+
+  @if !top
+    :top= !top
+
+  @if !right
+    :right= !right
+
+  @if !bottom
+    :bottom= !bottom
+
+  @if !left
+    :left= !left
+
