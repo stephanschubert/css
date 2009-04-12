@@ -17,3 +17,14 @@
   @if !left
     :left= !left
 
+=position-top-left(!top = false, !left = false)
+  +position("absolute", !top, false, false, !left)
+
+=position-top-right(!top = false, !right = false)
+  +position("absolute", !top, !right, false, false)
+
+=position-bottom-right(!bottom = false, !right = false)
+  +position("absolute", false, !right, !bottom, false)
+
+=position-bottom-left(!bottom = false, !left = false)
+  +position("absolute", false, false, !bottom, !left)
