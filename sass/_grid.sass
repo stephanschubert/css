@@ -1,0 +1,50 @@
+!grid_width ||= 960px
+!grid_cols  ||= 16
+!grid_gutter_width ||= 20px
+
+=first
+  :margin-left 0
+
+=last
+  :margin-right 0
+
+=grid-container
+  :margin-left auto
+  :margin-right auto
+  :width= !grid_width
+
+=grid-generate
+  @for !n from 1 through !grid_cols
+    .cell_#{!n}
+      :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width
+      :display inline
+      :float left
+      :margin
+        :left= !grid_gutter_width / 2
+        :right= !grid_gutter_width / 2
+
+=grid-prefix(!n)
+  :padding-left= (!grid_width / !grid_cols) * !n
+
+=grid-suffix(!n)
+  :padding-right= (!grid_width / !grid_cols) * !n
+
+=grid-generate-prefixes
+  @for !n from 1 through !grid_cols - 1          
+    .prefix_#{!n}
+      +grid-prefix(!n)
+
+=grid-generate-suffixes
+  @for !n from 1 through !grid_cols - 1
+    .suffix_#{!n}
+      +grid-suffix(!n)
+      
+=grid(!width = !grid_width, !cols = !grid_cols, !gutter_width = !grid_gutter_width)
+  !grid_width = !width
+  !grid_cols  = !cols
+  !grid_gutter_width = !gutter_width
+
+  +grid-container
+  +grid-generate
+  +grid-generate-prefixes      
+  +grid-generate-suffixes
