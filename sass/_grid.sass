@@ -15,7 +15,7 @@
 
 =grid-generate
   @for !n from 1 through !grid_cols
-    .cell_#{!n}
+    .grid_#{!n}
       :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width
       :display inline
       :float left
