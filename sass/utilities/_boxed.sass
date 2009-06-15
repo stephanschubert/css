@@ -1,0 +1,42 @@
+=boxed(!border_color, !bg_color, !border_radius = 6px, !top_color = "grey", !bottom_color = "grey")
+  :background-color= !bg_color
+  :border= 1px solid !border_color
+  
+  .box-header, .box-content, .box-footer
+    +clearfix
+
+  .tl, .tr, .bl, .br
+    :width= !border_radius
+    :height= !border_radius
+    
+  .tl, .bl
+    +float-left
+
+  .tr, .br
+    +float-right
+
+  .tl, .tr
+    :background-image= url("../images/bg-box-#{!top_color}.png")
+
+  .bl, .br
+    :background-image= url("../images/bg-box-#{!bottom_color}.png")
+
+  .tl
+    +move-up(1px)
+    +move-left(1px)
+    :background-position left top
+    
+  .tr
+    +move-up(1px)
+    +move-right(1px)
+    :background-position right top
+
+  .bl
+    +move-down(1px)
+    +move-left(1px)
+    :background-position left bottom
+
+  .br
+    +move-down(1px)
+    +move-right(1px)
+    :background-position right bottom
