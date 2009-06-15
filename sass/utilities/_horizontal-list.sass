@@ -1,0 +1,18 @@
+=horizontal-list(!padding = 4px)
+  +reset-box-model
+  +clearfix
+  +no-bullets
+
+  li
+    +float-left
+    :white-space nowrap
+
+    :padding
+      :left= !padding
+      :right= !padding
+
+    &.first
+      :padding-left 0
+
+    &.last      
+      :padding-right 0
