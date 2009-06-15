@@ -1,11 +1,13 @@
+// TODO: Comments!
+  
 !grid_width ||= 960px
 !grid_cols  ||= 16
 !grid_gutter_width ||= 20px
 
-=first
+=grid-first-cell
   :margin-left 0
 
-=last
+=grid-last-cell
   :margin-right 0
 
 =grid-container
@@ -13,28 +15,37 @@
   :margin-right auto
   :width= !grid_width
 
-=grid-width(!cols)
-  :width= (!grid_width / !grid_cols) * !cols - !grid_gutter_width
 
-=grid-generate
+=grid-cell-width(!n)
+  :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width
+
+=grid-cell-base
+  +float-left
+  :margin
+    :left= !grid_gutter_width / 2
+    :right= !grid_gutter_width / 2
+
+=grid-cells(!n)
+  +grid-cell-base
+  +grid-cell-width(!n)
+  
+=grid-generate-cells
   @for !n from 1 through !grid_cols
-    .grid_#{!n}
-      +grid-width(!n)
-      +float-left
-      :margin
-        :left= !grid_gutter_width / 2
-        :right= !grid_gutter_width / 2
+    .cells_#{!n}
+      +grid-cells(!n)
 
+        
 =grid-prefix(!n)
   :padding-left= (!grid_width / !grid_cols) * !n
-
-=grid-suffix(!n)
-  :padding-right= (!grid_width / !grid_cols) * !n
 
 =grid-generate-prefixes
   @for !n from 1 through !grid_cols - 1          
     .prefix_#{!n}
       +grid-prefix(!n)
+
+
+=grid-suffix(!n)
+  :padding-right= (!grid_width / !grid_cols) * !n
 
 =grid-generate-suffixes
   @for !n from 1 through !grid_cols - 1
@@ -47,6 +58,7 @@
   !grid_gutter_width = !gutter_width
 
   +grid-container
-  +grid-generate
+
+  +grid-generate-cells
   +grid-generate-prefixes      
   +grid-generate-suffixes
