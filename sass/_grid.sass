@@ -13,12 +13,14 @@
   :margin-right auto
   :width= !grid_width
 
+=grid-width(!cols)
+  :width= (!grid_width / !grid_cols) * !cols - !grid_gutter_width
+
 =grid-generate
   @for !n from 1 through !grid_cols
     .grid_#{!n}
-      :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width
-      :display inline
-      :float left
+      +grid-width(!n)
+      +float-left
       :margin
         :left= !grid_gutter_width / 2
         :right= !grid_gutter_width / 2
