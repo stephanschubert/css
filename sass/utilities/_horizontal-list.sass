@@ -1,4 +1,4 @@
-=horizontal-list(!padding = 4px)
+=horizontal-list(!padding_left = 0, !padding_right = 0)
   +reset-box-model
   +no-bullets
   :display inline
@@ -8,8 +8,8 @@
     :white-space nowrap
 
     :padding
-      :left= !padding
-      :right= !padding
+      :left= !padding_left
+      :right= !padding_right
 
     &.first
       :padding-left 0
