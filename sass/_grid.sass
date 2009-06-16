@@ -11,13 +11,19 @@
   :margin-right 0
 
 =grid-container
-  :margin-left auto
-  :margin-right auto
+  :margin
+    :left auto
+    :right auto
+
+    // Full margin due to adjacent-margin-collapsing!
+    :top= !grid_gutter_width 
+    :bottom= !grid_gutter_width
+    
   :width= !grid_width
 
 
-=grid-cell-width(!n)
-  :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width
+=grid-cell-width(!n, !adjust_by = 0)
+  :width= (!grid_width / !grid_cols) * !n - !grid_gutter_width + !adjust_by
 
 =grid-cell-base
   +float-left
@@ -25,9 +31,9 @@
     :left= !grid_gutter_width / 2
     :right= !grid_gutter_width / 2
 
-=grid-cells(!n)
+=grid-cells(!n, !adjust_by = 0)
   +grid-cell-base
-  +grid-cell-width(!n)
+  +grid-cell-width(!n, !adjust_by)
   
 =grid-generate-cells
   @for !n from 1 through !grid_cols
