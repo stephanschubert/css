@@ -4,6 +4,17 @@
 !grid_cols  ||= 16
 !grid_gutter_width ||= 20px
 
+=grid-padding(!left_and_right = !grid_gutter_width, !top_and_bottom = false)
+  :padding
+    :left= !left_and_right
+    :right= !left_and_right
+
+  @if !top_and_bottom
+    :padding
+      :top= !top_and_bottom
+      :bottom= !top_and_bottom
+
+      
 =grid-first-cell
   :margin-left 0
 
