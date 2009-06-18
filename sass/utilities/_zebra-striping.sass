@@ -5,7 +5,13 @@
 // the pseudo-class :nth-child.
 
 =zebra-striping(!even, !odd = "transparent")
-  &:nth-child(even), &.even
+  :nth-child(even)
     :background-color= !even
-  &:nth-child(odd), &.odd
+  :nth-child(odd)
     :background-color= !odd
+
+  li.even
+    :background-color= !even
+  li.odd
+    :background-color= !odd
+
