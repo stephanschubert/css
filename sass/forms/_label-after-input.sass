@@ -24,14 +24,11 @@
 
 =label-after-input(!which, !input_width = 24px, !adjust_top = 0.25em)
   li#{!which}
-    :position relative
+    +new-context
 
     label
-      :position relative
-      :left= !input_width
-      :top= !adjust_top
+      +move-right(!input_width)
+      +move-down(!adjust_top)
 
     input
-      :position absolute
-      :left 0
-      :top 0
+      +absolute-top-left
