@@ -1,16 +1,19 @@
-=vertical-rhythm(!font_size, !base_font_size = 12px, !line_height = 1.5)
-  !line_height = ((!base_font_size * !line_height) / !font_size)
+!font_size ||= 12px
+!line_height ||= 1.5
+  
+=vertical-rhythm(!font_size)
+  !space = ((!base_font_size * !line_height) / !font_size)
 
   :font-size= !font_size
-  :line-height= !line_height + "em"
-  :margin-top= !line_height + "em"
-  :margin-bottom= !line_height + "em"
+  :line-height= !space + "em"
+  :margin-top= !space + "em"
+  :margin-bottom= !space + "em"
 
-=asymmetrical-vertical-rhythm(!font_size, !top_factor = 1.5, !bottom_factor = 0.5, !base_font_size = 12px, !line_height = 1.5)
-  !line_height = ((!base_font_size * !line_height) / !font_size)
+=asymmetrical-vertical-rhythm(!font_size, !top_factor = 1.5, !bottom_factor = 0.5)
+  !space = ((!base_font_size * !line_height) / !font_size)
 
   :font-size= !font_size
-  :line-height= !line_height + "em"
-  :margin-top= !line_height * !top_factor + "em"
-  :margin-bottom= !line_height * !bottom_factor + "em"
+  :line-height= !space + "em"
+  :margin-top= !space * !top_factor + "em"
+  :margin-bottom= !space * !bottom_factor + "em"
   
