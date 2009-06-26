@@ -1,8 +1,8 @@
-!font_size ||= 12px
-!line_height ||= 1.5
+!base_font_size ||= 12px
+!base_line_height ||= 1.5
   
 =vertical-rhythm(!font_size)
-  !space = ((!base_font_size * !line_height) / !font_size)
+  !space = ((!base_font_size * !base_line_height) / !font_size)
 
   :font-size= !font_size
   :line-height= !space + "em"
@@ -10,7 +10,7 @@
   :margin-bottom= !space + "em"
 
 =asymmetrical-vertical-rhythm(!font_size, !top_factor = 1.5, !bottom_factor = 0.5)
-  !space = ((!base_font_size * !line_height) / !font_size)
+  !space = ((!base_font_size * !base_line_height) / !font_size)
 
   :font-size= !font_size
   :line-height= !space + "em"
