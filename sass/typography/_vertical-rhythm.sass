@@ -1,9 +1,7 @@
-=compute-margins(!font_size, !line_height = 1.5)
-  !margin = ((!font_size * !line_height) / !font_size) + "em"
-  :margin
-    :top= !margin
-    :bottom= !margin
-    
-=vertical-rhythm(!font_size, !line_height = 1.5)
-  +compute-margins(!font_size, !line_height)
+=vertical-rhythm(!font_size, !base_font_size = 12px, !line_height = 1.5)
+  !line_height = ((!base_font_size * !line_height) / !font_size) + "em"
+
   :font-size= !font_size
+  :line-height= !line_height
+  :margin-top= !line_height
+  :margin-bottom= !line_height
