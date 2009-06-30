@@ -22,13 +22,15 @@
 //   +label-after-input(".check_me")
 //
 
-=label-after-input(!which, !input_width = 24px, !adjust_top = 0.25em)
+=label-after-input(!which, !input_width = 24px, !adjust_top = false)
   li#{!which}
     +new-context
 
     label
       +move-right(!input_width)
-      +move-down(!adjust_top)
+
+      @if !adjust_top  
+        +move-down(!adjust_top)
 
     input
       +absolute-top-left
