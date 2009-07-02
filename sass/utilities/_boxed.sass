@@ -52,3 +52,8 @@
   .box-content
     +clearfix
 
+  // IE<8 fix   
+  .box-footer, .box-header
+    :clear both  
+    :height= !border_radius
+
