@@ -57,7 +57,10 @@
     +border-right(!border_color)
 
   // IE<8 fix   
+  .box-footer, .box-header, .box-content
+    +ie-gain-layout
+     
   .box-footer, .box-header
-    :clear both  
     :height= !border_radius
 
+      
