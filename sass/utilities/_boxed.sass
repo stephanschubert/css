@@ -21,7 +21,15 @@
     +move-up(1px)
     +move-right(1px)
     :background-position right top
-      
+
+  // IE fixes
+  .box-header, .tl, .tr
+    :font-size 0
+
+  .box-header
+    +ie-gain-layout
+    :height= !border_radius  
+    
 =boxed-bottom(!border_color, !bg_color, !bottom_color = "grey", !border_radius = 6px)
   .box-footer
     +clearfix
@@ -46,6 +54,14 @@
     +move-right(1px)        
     :background-position right bottom
 
+  // IE fixes
+  .box-footer, .bl, .br
+    :font-size 0
+
+  .box-footer
+    +ie-gain-layout
+    :height= !border_radius  
+
 =boxed(!border_color, !bg_color, !top_color = "grey", !bottom_color = "grey", !border_radius = 6px)
   +boxed-top(!border_color, !bg_color, !top_color, !border_radius)
   +boxed-bottom(!border_color, !bg_color, !bottom_color, !border_radius)
@@ -55,12 +71,5 @@
     +clearfix
     +border-left(!border_color)
     +border-right(!border_color)
-
-  // IE<8 fix   
-  .box-footer, .box-header, .box-content
+    // IE fix
     +ie-gain-layout
-     
-  .box-footer, .box-header
-    :height= !border_radius
-
-      
