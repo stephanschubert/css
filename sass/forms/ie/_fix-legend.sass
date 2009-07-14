@@ -3,8 +3,15 @@
 
 =ie-fix-legend(!amount = -7px)
   // Target IE7 and IE<7
-  *+html, * html
+  *+html
     legend
       :margin
         :left= !amount
         :right= !amount
+
+  * html
+    legend
+      :margin
+        :left= !amount
+        :right= !amount
+          
