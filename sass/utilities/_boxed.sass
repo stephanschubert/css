@@ -1,6 +1,6 @@
 =boxed-top(!border_color, !bg_color, !top_color = "grey", !border_radius = 6px)
-  .box-header
-    +clearfix
+  .hd
+    +new-context
     +border(!border_color)
     +no-border-bottom
     :background-color= !bg_color
@@ -11,28 +11,24 @@
     :background-image= url("../images/bg-box-#{!top_color}.png")
 
   .tl
-    +float-left
-    +move-up(1px)
-    +move-left(1px)
+    +absolute-top-left(-1px, -1px)
     :background-position left top
     
   .tr
-    +float-right
-    +move-up(1px)
-    +move-right(1px)
+    +absolute-top-right(-1px, -1px)
     :background-position right top
 
   // IE fixes
-  .box-header, .tl, .tr
+  .hd, .tl, .tr
     :font-size 0
 
-  .box-header
+  .hd
     +ie-gain-layout
     :height= !border_radius  
     
 =boxed-bottom(!border_color, !bg_color, !bottom_color = "grey", !border_radius = 6px)
-  .box-footer
-    +clearfix
+  .ft
+    +new-context
     +border(!border_color)
     +no-border-top
     :background-color= !bg_color
@@ -43,22 +39,18 @@
     :background-image= url("../images/bg-box-#{!bottom_color}.png")
 
   .bl
-    +float-left
-    +move-down(1px)
-    +move-left(1px)
+    +absolute-bottom-left(-1px, -1px)
     :background-position left bottom
 
   .br
-    +float-right
-    +move-down(1px)
-    +move-right(1px)        
+    +absolute-bottom-right(-1px, -1px)
     :background-position right bottom
 
   // IE fixes
-  .box-footer, .bl, .br
+  .ft, .bl, .br
     :font-size 0
 
-  .box-footer
+  .ft
     +ie-gain-layout
     :height= !border_radius  
 
@@ -67,7 +59,7 @@
   +boxed-bottom(!border_color, !bg_color, !bottom_color, !border_radius)
   :background-color= !bg_color
 
-  .box-content
+  .bd
     +clearfix
     +border-left(!border_color)
     +border-right(!border_color)
