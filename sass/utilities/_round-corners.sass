@@ -1,22 +1,19 @@
 // No IE-support for now!
 
-=round-corners(!topright = 5px, !bottomright = false, !bottomleft = false, !topleft = false)
+=round-corners(!topright = 5px, !bottomright = !topright, !bottomleft = !topright, !topleft = !topright)
 
   :border-top-right-radius= !topright
   :-moz-border-radius-topright= !topright
   :-webkit-border-top-right-radius= !topright
   
-  !bottomright ||= !topright
   :border-bottom-right-radius= !bottomright
   :-moz-border-radius-bottomright= !bottomright
   :-webkit-border-bottom-right-radius= !bottomright
 
-  !bottomleft ||= !topright
   :border-bottom-left-radius= !bottomleft
   :-moz-border-radius-bottomleft= !bottomleft
   :-webkit-border-bottom-left-radius= !bottomleft
   
-  !topleft ||= !topright
   :border-top-left-radius= !topleft
   :-moz-border-radius-topleft= !topleft
   :-webkit-border-top-left-radius= !topleft
