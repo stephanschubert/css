@@ -4,6 +4,27 @@
 !grid_cols  ||= 16
 !grid_gutter_width ||= 20px
 
+// Usually we don't care about the amount of pixel, we just want
+// to express to margins in relation to the global grid's gutter
+// width. So this mixin interprets the parameters as factors of
+// of the gutter's width. Top and bottom are 1 as default because
+// in most use cases we just want to set design elements apart.    
+//
+// Example:
+// Set a right margin of half the gutter's width:
+// +grid-margin(false, 0.5)    
+//
+=grid-margin(!top = 1, !right = false, !bottom = 1, !left = false)
+  @if !top
+    :margin-top = !grid_gutter_width * !top
+  @if !right
+    :margin-right = !grid_gutter_width * !right
+  @if !bottom
+    :margin-bottom = !grid_gutter_width * !bottom
+  @if !left
+    :margin-left = !grid_gutter_width * !left
+
+// TODO: Refactor like behave similar to grid-margin
 =grid-padding(!left_and_right = !grid_gutter_width, !top_and_bottom = false)
   :padding
     :left= !left_and_right
