@@ -5,11 +5,11 @@
 
 // Shortcut for faking engraved text
 =engrave(!color = #fff)
-  +shadow(0, 1px, 1px, !color)
+  +shadow(0, 1px, 0, !color)
 
 // Shortcut for faking embossed text - just an alias for convenience
 =emboss(!color = #000)
-  +shadow(0, 1px, 1px, !color)
+  +shadow(0, -1px, 0, !color)
 
 // Another shortcurt/alias for convenience
 =glow(!blur_radius = 5px, !color = #fff)
