@@ -24,8 +24,18 @@
   @if !left
     :margin-left = !grid_gutter_width * !left
 
-// TODO: Refactor like behave similar to grid-margin
-=grid-padding(!left_and_right = !grid_gutter_width, !top_and_bottom = false)
+=grid-padding(!top = 1, !right = false, !bottom = 1, !left = false)
+  @if !top
+    :padding-top = !grid_gutter_width * !top
+  @if !right
+    :padding-right = !grid_gutter_width * !right
+  @if !bottom
+    :padding-bottom = !grid_gutter_width * !bottom
+  @if !left
+    :padding-left = !grid_gutter_width * !left
+
+// DEPRECATED!
+=grid-padding-old(!left_and_right = !grid_gutter_width, !top_and_bottom = false)
   :padding
     :left= !left_and_right
     :right= !left_and_right
