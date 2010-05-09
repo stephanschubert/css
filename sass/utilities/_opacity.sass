@@ -1,0 +1,9 @@
+// Cross-browser opacity
+// Ensure you got hasLayout and/or dimensions set for IE
+// to make it work.
+
+=opacity(!opacity = 0.5)
+  :filter= "alpha(opacity=" + !opacity * 100 + ")"
+  :-moz-opacity= !opacity
+  :-khtml-opacity= !opacity
+  :opacity= !opacity
